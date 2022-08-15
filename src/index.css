@@ -1,0 +1,217 @@
+/*!
+* this is the main css file
+* you can control all project components from here
+*/
+
+/* tailwind utilitie classes */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* project components */
+.active-nav-item,
+.nav-item-hover-animation:hover {
+  @apply bg-white text-black;
+}
+.active-nav-item.scrolled,
+.nav-item-hover-animation.nav-item-scrolled:hover {
+  @apply !bg-slate-900 !text-white;
+}
+
+/* aside bar state */
+.Opened {
+  transform: none;
+}
+.Closed {
+  transform: translateX(-21rem);
+}
+/* notifications-popup */
+.notifications-popup-open {
+  transform: scale(1);
+  transform-origin: top right;
+  opacity: 1;
+}
+.notifications-popup-close {
+  transform: scale(0);
+  transform-origin: top right;
+  opacity: 0;
+}
+.sm-notification.notifications-popup-open {
+  transform: scaleY(1);
+}
+.sm-notification.notifications-popup-close {
+  transform: scaleY(0);
+}
+/* button component */
+.btn {
+  @apply rounded-full py-2 px-8 border-2 border-rose-600 hover:bg-rose-600 transition-colors hover:text-white text-rose-600;
+}
+.btn.btn-fill {
+  @apply bg-rose-600 text-white hover:bg-rose-700 hover:border-rose-700;
+}
+/* filter-bar */
+@media (max-width: 1024px) {
+  .filter-bar-closed {
+    transform: translateX(-356px);
+    transition: transform 0.2s ease-in;
+    top: 57px;
+    @apply bg-white z-10;
+  }
+  .filter-bar-opened {
+    transform: none;
+    transition: transform 0.2s ease-in;
+    top: 57px;
+    @apply bg-white z-10;
+  }
+}
+/* input focus component */
+.focus-animation:focus {
+  box-shadow: 0 0 0 2px theme(colors.slate.700);
+  border-color: theme(colors.slate.700);
+}
+.focus-animation.focus-lg:focus {
+  box-shadow: 0 0 0 4px theme(colors.rose.500);
+}
+.validation {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -100px;
+}
+.not-valid {
+  animation: not-valid 0.3s;
+  animation-fill-mode: forwards;
+}
+@keyframes not-valid {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 80px;
+  }
+  100% {
+    top: 61px;
+  }
+}
+
+/* applying swiper.js styles */
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  width: 45px !important;
+  height: 45px !important;
+  font-size: 16px;
+  line-height: 45px;
+  text-align: center;
+  background-color: #222222;
+  border-radius: 50%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  font-weight: bold;
+  color: #fff;
+  width: 45px !important;
+  height: 45px !important;
+}
+
+/* ajust footer icon colors */
+.adjust-colors > img {
+  mix-blend-mode: color-dodge;
+  background: #fff;
+  border-radius: 50%;
+}
+
+/* fix swiper bug */
+.swiper-button-disabled {
+  pointer-events: unset !important;
+}
+
+/* customize checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  position: relative;
+}
+
+input[type="radio"]::after,
+input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0) rotate(60deg);
+  will-change: transform;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  transition: transform 0.3s;
+}
+
+input[type="radio"]:checked:after,
+input[type="checkbox"]:checked:after {
+  transform: translate(-50%, -50%) scale(1) rotate(0);
+}
+
+/* input styles */
+.form-control {
+  @apply w-full  p-2 border focus-animation outline-none transition-shadow rounded;
+}
+
+.form-invalid {
+  box-shadow: 0 0 0 2px #b91c1c;
+}
+
+.background-animation {
+  animation: background-change 10s linear infinite;
+}
+
+@keyframes background-change {
+  0% {
+    @apply bg-slate-900;
+  }
+  50% {
+    @apply bg-slate-700;
+  }
+  100% {
+    @apply bg-slate-900;
+  }
+}
+
+.bubbles::after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -80px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: theme(colors.slate.900);
+}
+.bubbles::before {
+  content: "";
+  position: absolute;
+  bottom: -24px;
+  right: -100px;
+  width: 400px;
+  height: 200px;
+  border-radius: 9999px;
+  background-color: theme(colors.slate.900);
+  transform: rotate(45deg);
+}
+
+.status-box::after {
+  content: "";
+    position: absolute;
+    right: -31px;
+    top: -30px;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    z-index: 2;
+    -webkit-clip-path: polygon( 100% 0%, 0% 0%, 0% 65%, 1% 64.95%, 2% 64.8%, 3% 64.6%, 4% 64.3%, 5% 63.9%, 6% 63.45%, 7% 62.9%, 8% 62.25%, 9% 61.55%, 10% 60.8%, 11% 59.95%, 12% 59.05%, 13% 58.1%, 14% 57.1%, 15% 56.05%, 16% 55%, 17% 53.9%, 18% 52.8%, 19% 51.65%, 20% 50.5%, 21% 49.35%, 22% 48.2%, 23% 47.05%, 24% 45.9%, 25% 44.8%, 26% 43.75%, 27% 42.75%, 28% 41.75%, 29% 40.8%, 30% 39.9%, 31% 39.1%, 32% 38.35%, 33% 37.65%, 34% 37.05%, 35% 36.5%, 36% 36.05%, 37% 35.65%, 38% 35.35%, 39% 35.15%, 40% 35.05%, 41% 35%, 42% 35.05%, 43% 35.2%, 44% 35.45%, 45% 35.75%, 46% 36.15%, 47% 36.65%, 48% 37.2%, 49% 37.85%, 50% 38.55%, 51% 39.35%, 52% 40.2%, 53% 41.1%, 54% 42.05%, 55% 43.05%, 56% 44.1%, 57% 45.15%, 58% 46.3%, 59% 47.4%, 60% 48.55%, 61% 49.7%, 62% 50.85%, 63% 52%, 64% 53.15%, 65% 54.25%, 66% 55.35%, 67% 56.4%, 68% 57.45%, 69% 58.4%, 70% 59.35%, 71% 60.2%, 72% 61.05%, 73% 61.8%, 74% 62.45%, 75% 63.05%, 76% 63.6%, 77% 64.05%, 78% 64.4%, 79% 64.7%, 80% 64.85%, 81% 65%, 82% 65%, 83% 64.9%, 84% 64.75%, 85% 64.5%, 86% 64.2%, 87% 63.75%, 88% 63.25%, 89% 62.7%, 90% 62.05%, 91% 61.3%, 92% 60.5%, 93% 59.65%, 94% 58.75%, 95% 57.8%, 96% 56.8%, 97% 55.75%, 98% 54.65%, 99% 53.55%, 100% 52.4% );
+    clip-path: polygon( 100% 0%, 0% 0%, 0% 65%, 1% 64.95%, 2% 64.8%, 3% 64.6%, 4% 64.3%, 5% 63.9%, 6% 63.45%, 7% 62.9%, 8% 62.25%, 9% 61.55%, 10% 60.8%, 11% 59.95%, 12% 59.05%, 13% 58.1%, 14% 57.1%, 15% 56.05%, 16% 55%, 17% 53.9%, 18% 52.8%, 19% 51.65%, 20% 50.5%, 21% 49.35%, 22% 48.2%, 23% 47.05%, 24% 45.9%, 25% 44.8%, 26% 43.75%, 27% 42.75%, 28% 41.75%, 29% 40.8%, 30% 39.9%, 31% 39.1%, 32% 38.35%, 33% 37.65%, 34% 37.05%, 35% 36.5%, 36% 36.05%, 37% 35.65%, 38% 35.35%, 39% 35.15%, 40% 35.05%, 41% 35%, 42% 35.05%, 43% 35.2%, 44% 35.45%, 45% 35.75%, 46% 36.15%, 47% 36.65%, 48% 37.2%, 49% 37.85%, 50% 38.55%, 51% 39.35%, 52% 40.2%, 53% 41.1%, 54% 42.05%, 55% 43.05%, 56% 44.1%, 57% 45.15%, 58% 46.3%, 59% 47.4%, 60% 48.55%, 61% 49.7%, 62% 50.85%, 63% 52%, 64% 53.15%, 65% 54.25%, 66% 55.35%, 67% 56.4%, 68% 57.45%, 69% 58.4%, 70% 59.35%, 71% 60.2%, 72% 61.05%, 73% 61.8%, 74% 62.45%, 75% 63.05%, 76% 63.6%, 77% 64.05%, 78% 64.4%, 79% 64.7%, 80% 64.85%, 81% 65%, 82% 65%, 83% 64.9%, 84% 64.75%, 85% 64.5%, 86% 64.2%, 87% 63.75%, 88% 63.25%, 89% 62.7%, 90% 62.05%, 91% 61.3%, 92% 60.5%, 93% 59.65%, 94% 58.75%, 95% 57.8%, 96% 56.8%, 97% 55.75%, 98% 54.65%, 99% 53.55%, 100% 52.4% );
+    transform: rotate(65deg);
+}
