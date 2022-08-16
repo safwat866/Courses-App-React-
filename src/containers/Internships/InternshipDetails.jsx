@@ -37,7 +37,7 @@ const InternshipDetails = (props) => {
             </p>
             <p className="my-5">created by mohamed ali</p>
             <Btn
-              href={`/form?target=purchase%20Inerenship&course=${params.InternshipId}`}
+              href={`/register?target=purchase%20Inerenship&course=${params.InternshipId}`}
               className="w-fit"
               fill
             >

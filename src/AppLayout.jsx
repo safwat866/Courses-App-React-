@@ -5,11 +5,12 @@ import Footer from "./components/Footer/Footer";
 import Home from "./containers/Home/index";
 import Courses from "./containers/Courses/index";
 import CourseDetails from "./containers/Courses/CourseDetails";
-import Form from "./containers/Form/index";
+import Form from "./containers/Form/register";
 import Error from "./containers/ErrorPage";
 import WaitForActivation from "./containers/WaitForActiviatoin";
 import Internships from "./containers/Internships";
 import InternshipDetails from './containers/Internships/InternshipDetails'
+import Login from './containers/Form/login'
 
 const AppLayout = () => {
   return (
@@ -26,8 +27,11 @@ const AppLayout = () => {
           <Route path="/courses/:courseId">
             <CourseDetails title="Forsa | Course" />
           </Route>
-          <Route path="/form/">
-            <Form title="Forsa | Form" />
+          <Route path="/register/">
+            <Form title="Forsa | register" />
+          </Route>
+          <Route path="/login">
+            <Login title="Forsa | login" />
           </Route>
           <Route path="/wait-until-activation">
             <WaitForActivation title="Forsa | Thank you for using forsa" />

@@ -17,9 +17,9 @@ const Results = (props) => {
         </h2>
       </div>
       <div>
-        <Btn onClick={props.onOpen} className="lg:hidden btn mb-5 ml-5">
+        <button onClick={props.onOpen} className="lg:hidden btn mb-5 ml-5">
           Filter
-        </Btn>
+        </button>
       </div>
       <div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">

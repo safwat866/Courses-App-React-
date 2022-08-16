@@ -88,13 +88,13 @@ const Header = (props) => {
             </h3>
             <div className="flex">
               <Btn
-                href="/form?target=upload%20course"
+                href="/register?target=upload%20course"
                 className="!rounded-lg flex-1 md:m-3 m-1 text-center flex items-center justify-center text-sm"
               >
                 Upload Course
               </Btn>
               <Btn
-                href="/form?target=upload%internship"
+                href="/register?target=upload%internship"
                 className="!rounded-lg flex-1 md:m-3 m-1 text-center flex items-center justify-center text-sm"
               >
                 Upload Internship

@@ -1,12 +1,12 @@
 import React from "react";
 import MenuItems from "./MenuItems";
-import Logo from '../../assets/f.png'
+import Logo from "../../assets/f.png";
 
 const AsideMenu = (props) => {
   return (
     <>
       <aside
-        className={`left-0 top-0 h-[100vh] w-80 bg-white transition-transform shadow-lg z-10 fixed md:hidden block m-3 rounded-xl ${
+        className={`left-0 top-0 h-[100vh] w-80 bg-white transition-transregister shadow-lg z-10 fixed md:hidden block m-3 rounded-xl ${
           props.menuOpenState ? "Opened" : "Closed"
         }`}
       >

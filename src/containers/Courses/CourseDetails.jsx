@@ -37,7 +37,7 @@ const Course = (props) => {
             </p>
             <p className="my-5">created by mohamed ali</p>
             <Btn
-              href={`/form?target=purchase%20course&course=${params.courseId}`}
+              href={`/register?target=purchase%20course&course=${params.courseId}`}
               className="w-fit"
               fill
             >
