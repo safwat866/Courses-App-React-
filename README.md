@@ -6,10 +6,14 @@ this app is made with react
 # For editing this app
 
 #### download the project with this command:
-`git clone https://github.com/9AFWAT/Forsa.git`.
+```bash
+git clone https://github.com/9AFWAT/Forsa.git 
+```
 
 #### after this open your terminal and type:
-`npm i`
+```bash
+npm i
+```
 #### and now enjoy editing this app
 
 ### if you have any issues or found any improvments you can make a pull request and we well fix this issue as soon as possible♥
