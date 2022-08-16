@@ -6,7 +6,7 @@ const AsideMenu = (props) => {
   return (
     <>
       <aside
-        className={`left-0 top-0 h-[100vh] w-80 bg-white transition-transregister shadow-lg z-10 fixed md:hidden block m-3 rounded-xl ${
+        className={`left-0 top-0 h-[100vh] w-80 bg-white transition-transregister shadow-lg z-10 fixed md:hidden block m-3 rounded-xl transition-all ${
           props.menuOpenState ? "Opened" : "Closed"
         }`}
       >
