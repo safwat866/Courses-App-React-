@@ -10,6 +10,6 @@ this app is made with react
 
 #### after this open your terminal and type:
 `npm i`
-and now enjoy editing this app
+#### and now enjoy editing this app
 
 ### if you have any issues or found any improvments you can make a pull request and we well fix this issue as soon as possible♥
