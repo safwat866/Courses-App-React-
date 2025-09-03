@@ -21,5 +21,5 @@ A modern, fully responsive front-end web application for browsing and filtering 
 - **React Router**
 - **Tailwind CSS** or **CSS Modules** (depending on your setup)
 - **Framer Motion / AOS / Custom CSS** for animations
-- **Formik / React Hook Form / Custom Validation** for form handling
+- **Custom Validation** for form handling
 - **Responsive HTML structure**
